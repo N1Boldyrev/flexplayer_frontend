@@ -1,0 +1,1 @@
+export { TitlesLayout } from "./TitlesLayout";

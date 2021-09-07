@@ -1,0 +1,25 @@
+.wrapper{
+  width: 236px;
+  height: 336px;
+}
+
+.newTitleCover{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  width: 205px;
+  height: 292px;
+  transition: 0.3s;
+  background: #393939;
+}
+
+.newTitleCover:hover{
+  cursor: pointer;
+  width: 236px;
+  height: 336px;
+  transition: 0.3s;
+  box-shadow: inset 0 12px 4px rgba(0, 0, 0, 0.25);
+  background: #333333;
+}

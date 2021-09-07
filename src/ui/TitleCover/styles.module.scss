@@ -1,0 +1,79 @@
+.wrapper{
+  width: 236px;
+  height: 336px;
+}
+
+.titleCover{
+  width: 205px;
+  height: 292px;
+  border-radius: 6px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+
+  .divider{
+    height: 100%;
+  }
+
+  .titleName{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    opacity: 0;
+    height: 50px;
+    transition: 0.3s;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .refresh{
+    height: 31px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    opacity: 0;
+    transition: 0.3s;
+    background: rgba(0, 0, 0, 0.33);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+    button{
+      background: transparent;
+      border: none;
+    }
+
+    svg{
+      margin-right: 10px;
+    }
+  }
+}
+
+.titleCover.hovered{
+  width: 236px;
+  height: 336px;
+  box-shadow: 0 0 17px 13px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+
+  .titleName{
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.33);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    transition: 0.3s;
+  }
+
+  .refresh{
+    opacity: 1;
+    transition: 0.3s;
+
+    svg:hover{
+      cursor: pointer;
+      transform: rotate(-180deg);
+      transition: linear 0.2s;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.folder{
+  border: none;
+  background: white;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  transition: ease-in-out 0.1s;
+  div{
+    margin-left: 20px;
+  }
+  .icon{
+    margin-left: 20px;
+    svg{
+      fill: black;
+      transition: ease-in-out 0.1s;
+    }
+  }
+}
+
+.folder:hover{
+  cursor: default;
+  background: black;
+  color: white;
+  svg{
+    fill: white;
+  }
+}

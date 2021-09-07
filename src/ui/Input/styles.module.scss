@@ -1,0 +1,141 @@
+$transition: ease-in 0.1s;
+
+.wrapper{
+  width: 100%;
+}
+
+.wrapper.dark{
+  .inputWrap{
+    background: #484848;
+  }
+  input{
+    background: #484848;
+    color: white;
+  }
+}
+
+.wrapper.light{
+  .inputWrap{
+    background: white;
+    border: 1px solid black;
+    .label{
+      color: black;
+    }
+  }
+  .inputWrap.focused{
+    border: 1px solid #FBC02D;
+    .label{
+      color: #FBC02D;
+    }
+  }
+  input{
+    background: white;
+    color: black;
+  }
+}
+
+.inputWrap{
+  width: 100%;
+  transition: $transition;
+  position: relative;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  input{
+    height: 67px;
+    border-radius: 10px 0 0 10px;
+    outline: none;
+    padding-left: 18px;
+    font-size: 18px;
+    border: none;
+    padding-top: 8px;
+  }
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    font-size: 18px;
+    border: 1px solid #484848;
+    -webkit-text-fill-color: white;
+    -webkit-box-shadow: 0 0 0 1000px  #484848 inset;
+    transition: none;
+  }
+
+  .label{
+    transition: $transition;
+    font-size: 18px;
+    color: white;
+    position: absolute;
+    top: 28px;
+    left: 21px;
+  }
+}
+
+.inputWrap.focused{
+  border: 1px solid #FBC02D;
+  input{
+    transition: $transition;
+  }
+
+  .label{
+    font-size: 11px;
+    top: 8px;
+    left: 19px;
+    color: #FBC02D;
+  }
+
+  .rightAdornment{
+    svg{
+      fill: #FBC02D;
+    }
+  }
+}
+
+.inputWrap.error{
+  border: 1px solid #ef534f;
+
+  .label{
+    color: #ef534f;
+  }
+
+  .rightAdornment{
+    svg{
+      fill: #ef534f;
+    }
+  }
+}
+
+.inputWrap.rightAdornment{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .adornment{
+    margin-right: 18px;
+    margin-left: 2px;
+    svg{
+      transition: $transition;
+      fill: white;
+    }
+  }
+}
+
+.helperText{
+  color: white;
+  margin-left: 10px;
+  margin-top: 5px;
+  font-size: 14px;
+  height: 20px;
+  opacity: 0;
+  transition: 0.1s;
+}
+
+.helperText.error{
+  color: #ef534f;
+  opacity: 1;
+  transition: 0.1s;
+}
